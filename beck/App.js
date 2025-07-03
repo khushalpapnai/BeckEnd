@@ -51,7 +51,7 @@ console.log(
 {
   mongoose
     .connect(
-      
+      process.env.MONGO_URI
     )
     .then(() => {
       App.listen(process.env.PORT||5000);
