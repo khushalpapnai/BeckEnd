@@ -3,11 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@react-google-maps/api": "^2.20.5",
-    "cross-env": "^7.0.3",
-    "css-loader": "^7.1.2",
-    "google-maps-react": "^2.0.6",
-    "ol": "^10.3.1",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-router-dom": "^5.3.4",
@@ -15,8 +10,8 @@
     "react-transition-group": "^4.4.5"
   },
   "scripts": {
-    "proxy": "https://seeing-world.onrender.com",
-    "start": "NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
+    
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
