@@ -14,13 +14,11 @@
     "react-router-dom": "^5.3.4",
     "react-scripts": "^3.2.0",
     "react-transition-group": "^4.4.5",
-    "typescript": "^5.7.3"
+    
   },
   "scripts": {
-    "proxy": "http://localhost:5000",
-    "start": "NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "proxy": "https://seeing-world.onrender.com",
+    "start": "NODE_OPTIONS=--openssl-legacy-provider react-scripts start"
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
