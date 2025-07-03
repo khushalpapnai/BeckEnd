@@ -1,9 +1,0 @@
-{
-    "env": {
-        "User_Name":"howoneknows",
-        "User_Password":"LQz5H4tJeYdvkvfD",
-        "Db_Name":"Mern",
-        "Jwt_Key":"Yours_privateKey_dontShare"
-        
-    }
-}
