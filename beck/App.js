@@ -51,7 +51,7 @@ console.log(
 {
   mongoose
     .connect(
-      `mongodb+srv://${process.env.User_Name}:${process.env.User_Password}@cluster0.rhqikqb.mongodb.net/${process.env.Db_Name}?retryWrites=true&w=majority&tls=true`
+      
     )
     .then(() => {
       App.listen(process.env.PORT||5000);
