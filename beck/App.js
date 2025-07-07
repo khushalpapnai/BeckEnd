@@ -36,20 +36,22 @@ App.get("*", (req, res) => {
 App.use((error, req, res, next) => {
   if (req.file) {
     fs.unlink(req.file.path, (err) => {
-      console.log(err);
+      if (err) console.error("Failed to delete file:", err);
     });
   }
-  if (res.headerSent) {
-    return next(error);
-  }
-  res.status(error.code || 500);
-  res.json({ message: error.message || "no respose from server" });
+
+  const status = typeof error.code === 'number' ? error.code : 500;
+
+  // Optional: log error details for debugging
+  console.error("Error occurred:", {
+    message: error.message,
+    code: error.code,
+    stack: error.stack
+  });
+
+  res.status(status).json({ message: error.message || "No response from server" });
 });
-console.log(
-  process.env.User_Name,
-  process.env.User_Password,
-  process.env.Db_Name
-);
+
 {
   mongoose
     .connect(
