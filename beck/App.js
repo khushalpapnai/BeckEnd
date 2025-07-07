@@ -27,9 +27,11 @@ App.use((req, res, next) => {
 
 App.use("/api/places", place_server);
 App.use("/api/user", user_server);
-App.use((req, res, next) => {
-  const error = new Httperror("this place couldnot be found", 404);
-  throw error;
+// Serve frontend static files
+App.use(express.static(path.join(__dirname, "front", "build")));
+
+App.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "front", "build", "index.html"));
 });
 App.use((error, req, res, next) => {
   if (req.file) {
